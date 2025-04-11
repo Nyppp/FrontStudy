@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        /* HTML 헤드 코드 내에서 직접 CSS코드 작성 (내부 스타일 시트) */
+        div {
+            color : blue;
+            font-size : 24px;
+        }
+
+        .first {
+            color : red;
+            font-size : 36px;
+            font-style :italic;
+            font-weight: 1000;
+        }
+    </style> -->
+
+    <!-- 외부 스타일 시트(외부 css 파일 사용) -->
+    <!-- 보통은 유지보수를 위해 외부 스타일 시트 방식 사용 -->
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="first">첫번째 헤더</div>
+    <div class="first">두번째 헤더</div>
+
+    <!-- 인라인 스타일 (태그 내에서 직접 지정) -->
+    <div style="color: blue;">세번째 헤더</div>
+</body>
+</html>
