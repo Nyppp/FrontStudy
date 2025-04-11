@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .ancestor{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            /* relative 포지션 > 주로 상위 항목에 적용(로컬좌표) */
+            position: relative;
+        }
+        .parent {
+            /* absolute 포지션 > 하위 항목에 적용(부모 기준) */
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 10px;
+            left: 10px;
+            border: 1px solid black;
+        }
+        .child {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="ancestor">
+        <div class="parent">
+            <div class="child">나는부모안에서위치함</div>
+        </div>
+    </div>
+</body>
+</html>

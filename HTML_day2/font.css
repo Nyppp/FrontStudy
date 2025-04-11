@@ -1,0 +1,19 @@
+@font-face {
+    /* 웹에서 폰트 불러오기 */
+    font-family: 'CookieRun-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#box_model{
+    /* 불러온 폰트를 가져와서 사용 */
+    font-family: 'CookieRun-Regular';
+    border: 1px solid black;
+    padding: 30px;
+    margin: 30px;
+}
+
+#outer_box{
+    border:1px solid red;
+}
