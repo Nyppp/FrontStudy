@@ -1,0 +1,66 @@
+@font-face {
+    /* 웹에서 폰트 불러오기 */
+    font-family: 'CookieRun-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+    font-family: 'CookieRun-Regular';
+    text-align: center;
+    color: blue;
+    font-style: italic;
+    font-size: 50px;
+}
+
+body{
+    border: 2px solid black;
+    width: 50%;
+    font-family: 'CookieRun-Regular';
+}
+
+.headbox{
+    align-items: center;
+    background-color: antiquewhite;
+    opacity: 0;
+}
+
+.mainbox{
+    background-color: aquamarine;
+    opacity: 0;
+}
+
+.footerbox{
+    background-color:darkgoldenrod;
+    color:darkblue;
+    opacity: 0;
+}
+
+.headbox:hover{
+    opacity: 1;
+}
+
+.mainbox:hover{
+    opacity: 1;
+}
+
+.footerbox:hover{
+    opacity: 1;
+}
+
+.myImg{
+    width: 300px;
+    align-content: center;
+    display: block;
+    margin: auto;
+}
+
+li{
+    font-size: 20px;
+}
+
+p{
+    font-size: 20px;
+    color: red;
+}

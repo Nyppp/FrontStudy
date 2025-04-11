@@ -1,0 +1,32 @@
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+thead{
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+thead > tr > td {
+    border-bottom-width: 3px;
+}
+
+td:first-child{
+    background-color: lightgray;
+    font-weight: bold;
+    border-right-width: 3px;
+}
+
+tfoot > tr > td{
+    background-color: white !important;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px !important;
+    font-weight: normal !important;
+}
