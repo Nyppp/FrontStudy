@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 24px; 
+        width: 800px;
+        height: 1200px;
+        border: 2px solid black;
+        padding: 24px;
+        }
+
+        .grid-item {
+        border: 1px solid #333;
+        text-align: center;
+        }
+        
+        img{
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;;
+        }
+
+        #coverImg{
+            object-fit: cover;
+        }
+
+        #containImg{
+            object-fit: contain;
+        }
+
+        #fillImg{
+            object-fit: fill;
+        }
+
+        #repeatImg{
+            width: 300px;
+            height: 300px;
+            background-image: url("image/img.png");
+            background-repeat: repeat;
+        }
+
+        #repeatX{
+            width: 300px;
+            height: 300px;
+            background-image: url("image/img.png");
+            background-repeat: repeat-x;
+        }
+
+        #repeatY{
+            width: 300px;
+            height: 300px;
+            background-image: url("image/img.png");
+            background-repeat: repeat-y;
+        }
+
+        #repeatNo{
+            width: 300px;
+            height: 300px;
+            background-image: url("image/img.png");
+            background-repeat: no-repeat;
+
+            background-size: contain;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item">default<br>
+            <img src="image\img.png">
+        </div>
+
+        <div class="grid-item">cover<br>
+            <img id="coverImg" src="image\img.png">
+        </div>
+
+        <div class="grid-item">contain<br>
+            <img id="containImg" src="image\img.png">
+        </div>
+
+        <div class="grid-item">fill<br>
+            <img id="fillImg" src="image\img.png">
+        </div>
+
+        <div class="grid-item">repeat background<br>
+            <div id="repeatImg"></div>
+        </div>
+
+        <div class="grid-item">repeat x<br>
+            <div id="repeatX"></div>
+        </div>
+
+        <div class="grid-item">repeat y<br>
+            <div id="repeatY"></div>
+        </div>
+
+        <div class="grid-item">no repeat and size contain<br>
+            <div id="repeatNo"></div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

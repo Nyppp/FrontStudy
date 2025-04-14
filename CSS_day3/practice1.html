@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #333333;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        /* 큰거 색 #666666 작은거 색 #999999 */
+        .flex-container {
+            display: flex;
+            background-color: #333333;
+
+            flex-wrap: wrap;
+            gap:16px;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+        }
+
+        .flex-header{
+            display: flex;
+            background-color: #666666;
+
+            height: 200px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .flex-main{
+            display: flex;
+            background-color: #333333;
+
+            flex-direction: row;
+
+            gap:10px;
+            justify-content: space-between;
+            align-items: center;
+
+            height: 400px;
+            text-align: center;
+        }
+
+        .flex-footer{
+            display: flex;
+            background-color: #666666;
+
+            justify-content: center;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .flex-aside{
+            display: flex;
+            background-color: #666666;
+
+            width: 20%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .flex-section{
+            display: flex;
+            background-color: #666666;
+
+            width: 60%;
+            height: 100%;
+
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            
+            gap:10px;
+        }
+
+        .flex-article{
+            background-color: #999999;
+            text-align: center;
+            border-radius: 10px;
+
+            width: 90%;
+        }
+
+        #imgArticle{
+            height:  200px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <header>
+            <div class="flex-header">header</div>
+
+        </header>
+
+        <main>Main
+            <div class="flex-main">
+                <aside class="flex-aside">aside(L)</aside>
+
+                <section class="flex-section">section
+                    <article class="flex-article">article 1</article>
+                    <article class="flex-article">article 2</article>
+                    <article class="flex-article" id="imgArticle">article 3</article>
+                    <article class="flex-article">article 4</article>
+
+                </section>
+
+                <aside class="flex-aside">aside(R)</aside>
+            </div>
+        </main>
+
+        <footer>
+            <div class="flex-footer"> footer
+
+
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

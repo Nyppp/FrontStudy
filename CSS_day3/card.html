@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .card-header {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+        }
+        
+        .card-content {
+            padding: 15px;
+            flex-grow: 1;
+        }
+        
+        .card-footer {
+            padding: 15px;
+            display: flex;
+            justify-content: flex-end;
+            border-top: 1px solid #eee;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        /* 반응형 레이아웃 */
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 10px);
+                min-width: 150px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Card 1</h2>
+            </div>
+            <div class="card-content">
+                <p>This is the content for card 1. Flexbox makes it easy to align and distribute space among items in a container.</p>
+            </div>
+            <div class="card-footer">
+                <button>Read More</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Card 2</h2>
+            </div>
+            <div class="card-content">
+                <p>This is the content for card 2. With flexbox, you can easily create responsive layouts.</p>
+            </div>
+            <div class="card-footer">
+                <button>Read More</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Card 3</h2>
+            </div>
+            <div class="card-content">
+                <p>This is the content for card 3. Flexbox provides a more efficient way to lay out, align and distribute space among items.</p>
+            </div>
+            <div class="card-footer">
+                <button>Read More</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Card 4</h2>
+            </div>
+            <div class="card-content">
+                <p>This is the content for card 4. Even when your items have different heights, flexbox can help align them properly.</p>
+            </div>
+            <div class="card-footer">
+                <button>Read More</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Card 5</h2>
+            </div>
+            <div class="card-content">
+                <p>This is the content for card 5. Flexbox is a one-dimensional layout method for arranging items in rows or columns.</p>
+            </div>
+            <div class="card-footer">
+                <button>Read More</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Card 6</h2>
+            </div>
+            <div class="card-content">
+                <p>This is the content for card 6. The flex layout allows responsive elements within a container to be automatically arranged.</p>
+            </div>
+            <div class="card-footer">
+                <button>Read More</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout Test</title>
+  <style>
+    .grid-container {
+      display: grid;
+
+      /* fr > 부모 계층의 크기에 맞춰 계산 */
+      /* 행, 열 갯수에 맞춰 fr 갯수도 맞춰 쓰기 */
+      grid-template-columns: 1fr 1fr 1fr; 
+      grid-template-rows: 1fr 1fr 1fr; 
+      gap: 24px; 
+      width: 600px;
+      height: 600px;
+      border: 2px solid black;
+      padding: 24px;
+    }
+
+    .grid-item {
+      background-color: skyblue;
+      border: 1px solid #333;
+      text-align: center;
+      font-size: 24px;
+      padding: 30px;
+    }
+
+    #item1{
+        background-color: skyblue;
+        border: 1px solid #333;
+        text-align: center;
+        font-size: 24px;
+        padding: 30px;
+
+        /* 크기 확장 */
+        grid-column: 1 / 4;
+        grid-row: span 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <!-- 여러 클래스 중, 특정 값만 특징 주고싶을때 아래와 같이 id부여 -->
+    <div class="grid-item" id="item1">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+  </div>
+</body>
+</html>
