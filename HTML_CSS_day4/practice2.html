@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: #EBEBEB;
+            font-family: "Noto Sans KR";
+        }
+
+        /* 큰 틀에 대해 flex 설정 */
+        .container{
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            gap:19px;
+            margin: 0 auto;
+
+            width: 70%;
+        }
+
+        /* 메인페이지 > 내부 틀 (포인트, 내용 부분 나열 위한 flex) */
+        .inner-container{
+            display: flex;
+            gap:20px;
+
+            width: 100%;
+
+            justify-content: space-between;
+        }
+
+        .title{
+            display: flex;
+            background-color: #D9D9D9;
+            padding: 90px 67px 90px 67px;
+            gap:10px;
+            
+            box-sizing: border-box;
+            width: 100%;
+            height: 240px;
+
+            align-items: center;
+        }
+
+        .main-title{
+            font-family: "BM HANNA_TTF";
+            font-weight: bold;
+            font-size: 60px;
+            
+        }
+
+        .section-main{
+            background-color: #ffffff;
+
+            padding: 32px;
+            gap: 40px;
+
+            width: 80%;
+
+            box-sizing: border-box;
+        }
+
+        .section-side{
+            background-color: #ffffff;
+
+            padding: 10px;
+            gap:10px;
+
+            width:20%;
+
+            box-sizing: border-box;
+        }
+
+       .img-section{
+            width: 100%;
+            height: 400px;
+
+            object-fit: fill;
+       } 
+
+       .point-list{
+            display: flex;
+            flex-direction: column;
+            gap:16px;
+       }
+
+       .footer{
+            display: flex;
+            width: 100%;
+            background-color: #ffffff;
+
+            padding: 60px 0px 60px 0px;
+
+            gap: 10px;
+
+            flex-direction: column;
+            align-items: center;
+       }
+
+       .guide-link{
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+       }
+
+       .img-link{
+            display: flex;
+            flex-direction: row;
+       }
+
+       .fb-img{
+            background-image: url("image/fb.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            width: 52px;
+            height: 52px;
+       }
+
+       .youtube-img{
+            background-image: url("image/youtube.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            width: 52px;
+            height: 52px;
+       }
+
+       .period-table{
+            border: 1px solid #EBEBEB;
+            border-collapse: collapse;
+
+            width: 100%;
+
+            font-size: 18px;
+            
+
+            text-align: center;
+       }
+
+       thead > tr > td{
+            background-color: #D3D3D3;
+       }
+
+       td{
+            border: 1px solid #EBEBEB;
+       }
+
+       .highlight-text{
+            color: #0066FF;
+       }
+       
+       #bold-text{
+            font-weight: bold;
+       }
+
+       .submit-button{
+            background-color: #1f1f1f;
+            color: white;
+
+            border-radius: 18px;
+            padding: 16px 47px 16px 47px;
+            box-sizing: border-box;
+
+            width: 100%;
+            font-size: 32px;
+            font-weight: 700;
+       }
+
+       @media(max-width :768px){
+            .inner-container{
+                flex-direction: column;
+            }
+
+            .section-main{
+                width: 100%;
+            }
+
+            .section-side{
+                width: 100%;
+            }
+       }
+
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section1 class="title">
+            <h1 class="main-title">이스트소프트 오르미 11기</h1>
+        </section1>
+
+        <section-frame class="inner-container">
+            <section2 class="section-main">
+                <article1>
+                    <h1>오르미 <span class=highlight-text>11기의 포인트</span></h1> 
+                    <ul class="point-list">
+                        <li>100% 실시간 온라인 강의로 진행된다.</li>
+                        <li>이스트소프트 현직 개발자의 멘토링을 통한 현장형 인재 양성 과정이다.</li>
+                        <li>수료 후 취업까지 전 과정을 지원한다. </li>
+                    </ul>
+
+                    <h1>기간</h1>
+                    <table class="period-table">
+                        <thead>
+                            <tr>
+                                <td>시작일</td>
+                                <td>종료일</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>2025.04.08</td>
+                                <td>2025.08.</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                    
+                </article1>
+            </section2>
+
+            <section3 class="section-side">
+                <article2>
+                    <h1>내용</h1>
+                    <ul>
+                        <li>알고리즘</li>
+                        <li>Java</li>
+                        <li>DB</li>
+                        <li>WEB</li>
+                        <li>네트워크</li>
+                    </ul>
+
+                </article2>
+            </section3>
+        </section-frame>
+
+        <input type="submit" class="submit-button" value="신청하러 가기">
+
+        <img class="img-section" src="image/Img.png" alt="컴퓨터 이미지"></img>
+    </main>
+
+    <footer class="footer">
+        <div class="guide-link">
+            <div>고객센터 안내</div>
+            <div id="bold-text">개인정보처리방침</div>
+        </div>
+
+        <div>(주) 이스트소프트</div>
+
+        <div class="img-link">
+            <a href="#" class="fb-img"></a>
+            <a href="#" class="youtube-img"></a>
+        </div>        
+    </footer>
+</body>
+</html>
