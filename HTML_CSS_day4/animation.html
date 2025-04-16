@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 애니메이션 예시</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            max-width: 800px;
+        }
+
+        .example {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            width: 200px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+
+        }
+
+        h2 {
+            color: #444;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* 예시 1: opacity blink */
+        .box-blink {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 0 auto;
+
+            animation: blink 1s linear infinite;
+        }
+        
+        @keyframes blink {
+            0% {
+               opacity: 1; 
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* 예시 2: 각도 회전 후 이동 */
+        .box-rotateandmove{
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c;
+            margin: 0 auto;
+            animation: rotate-move 3s infinite alternate;   
+        }
+
+        @keyframes rotate-move {
+            25% {
+                transform: rotate(45deg);
+            }
+            50%{
+                transform: translateX(-50px) rotate(45deg);
+            }
+            75%{
+                transform: rotate(45deg);
+            }
+        }
+        
+        /* 예시 3: 이동 후 각도 회전*/
+        .box-moveandrotate{
+            width: 100px;
+            height: 100px;
+            background-color: #2ecc71;
+            margin: 0 auto;
+            animation: move-rotate 3s infinite alternate;
+        }
+
+        @keyframes move-rotate {
+            25% {
+                transform: translateX(50px);
+            }
+            50%{
+                transform: translateX(50px) rotate(45deg);
+            }
+            75%{
+                transform: translateX(50px) rotate(0deg);
+            }
+        }
+
+        /* 예시 4: 3d 회전 */
+        .box-3drotate{
+            width: 100px;
+            height: 100px;
+            background-color: #f39c12;
+            margin: 0 auto;
+            animation: rotate-axis 2s infinite;
+        }
+
+        @keyframes rotate-axis {
+            0% {
+                transform: perspective(400px) rotateY(0deg);
+            }
+            100% {
+                transform: perspective(400px) rotateY(360deg);
+            }
+        }
+
+        /* 예시 5: 다중 변환 */
+        .box-multiple {
+            width: 100px;
+            height: 100px;
+            background-color: #9b59b6;
+            margin: 0 auto;
+            transition: all 0.5s ease;
+        }
+        
+        .box-multiple:hover {
+            transform: rotate(45deg) scale(1.2);
+            background-color: #34495e;
+            border-radius: 50%;
+        }
+
+        /* 예시 6: 복잡한 애니메이션 */
+        .box-complex {
+            width: 100px;
+            height: 100px;
+            background-color: #34495e;
+            margin: 0 auto;
+            position: relative;
+            animation: move 4s infinite alternate;
+        }
+
+        
+        @keyframes move {
+            0% {
+                transform: translateX(-50px) rotatey(0deg) perspective(800px);
+                background-color: #34495e;
+            }
+            25% {
+                transform: translateX(0) rotatey(180deg) perspective(800px);
+                background-color: #3498db;
+            }
+            50% {
+                transform: translateX(50px) rotatey(360deg) perspective(800px);
+                background-color: #2ecc71;
+                border-radius: 50%;
+            }
+            75% {
+                transform: translateX(0) rotatey(180deg) perspective(800px);
+                background-color: #e74c3c;
+                border-radius: 0;
+            }
+            100% {
+                transform: translateX(-50px) rotatey(0deg) perspective(800px);
+                background-color: #f39c12;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 애니메이션 예시</h1>
+    
+    <div class="container">
+        <div class="example">
+            <h2>Opacity blink</h2>
+            <div class="box-blink"></div>
+            <p>자동으로 실행됩니다</p>
+        </div>
+        
+        <div class="example">
+            <h2>각도 회전 후 이동</h2>
+            <div class="box-rotateandmove"></div>
+            <p>자동으로 실행됩니다</p>
+        </div>
+        
+        <div class="example">
+            <h2>이동 후 각도 회전</h2>
+            <div class="box-moveandrotate"></div>
+            <p>자동으로 실행됩니다</p>
+        </div>
+        
+        <div class="example">
+            <h2>3D 회전(Perspective)</h2>
+            <div class="box-3drotate">각도 파악용</div>
+            <p>자동으로 실행됩니다</p>
+        </div>
+        
+        <div class="example">
+            <h2>다중 변환 (hover)</h2>
+            <div class="box-multiple"></div>
+            <p>마우스를 올려보세요</p>
+        </div>
+        
+        <div class="example">
+            <h2>복잡한 애니메이션</h2>
+            <div class="box-complex"></div>
+            <p>자동으로 실행됩니다</p>
+        </div>
+    </div>
+</body>
+</html>
