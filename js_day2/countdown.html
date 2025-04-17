@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 100px;
+            height: 100px;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        #count-text{
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p id="count-text"></p>
+    </div>
+
+    <script>
+        const countdown = document.querySelector('#count-text');
+        const textBox = document.querySelector('.container');
+        let launchString = "Launch!";
+        let count = 10;
+
+        function start_countdown(){
+            countdown.textContent = count;
+
+            if(count <= 3){
+                textBox.style.backgroundColor = 'red';
+            }
+
+            //재귀함수로 1초마다 반복 > 카운트가 0이 될 때 까지
+            if(count > 0){
+                setTimeout(start_countdown, 1000);
+            } else{
+                countdown.textContent = launchString;
+            }
+
+            count--;
+        }
+
+        start_countdown();
+
+    </script>
+</body>
+</html>

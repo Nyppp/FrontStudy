@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">Hello</p>
+    <button onclick="changeText()">change</button>
+
+    <!-- js코드를 <script> 태그로 html문서 내부에 작성, body 내부 -->
+    <script>
+        function changeText(){
+            const el = document.getElementById('text');
+            el.textContent = "Changed!";
+        }
+    </script>
+</body>
+</html>

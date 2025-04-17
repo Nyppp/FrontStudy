@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Movie Search</title>
+    <script src="script.js"></script>
+    <style>
+
+        #results {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin : 10px auto;
+            gap:10px;
+            box-sizing: border-box;
+        }
+
+        .result {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        width: 400px;
+
+        border-radius: 10px;
+
+        box-shadow: 3px 3px 3px gray;
+        }
+        .title {
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 1vh;
+        word-wrap: break-word;
+        width: 100%;
+        text-align: center;
+        }
+        .info {
+        font-style: italic;
+        font-size: 1vh;
+        width: 100%
+        }
+        .poster{
+            width: 100%;
+            height: 70%;
+
+            object-fit: cover;
+        }
+        .desc{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            width: 100%;
+
+            gap : 10px;
+        }
+
+        .search_button{
+            width: 30px;
+            height: 30px;
+            background-image: url("search.png");
+            background-size: contain;
+        }
+
+        .search_area{
+            display: flex;
+        }
+
+        .result:hover .poster{
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .result:hover .desc{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-title">Movie Search</h1>
+    <div class="search_area">
+    <input type="text" id="searchInput" placeholder="Enter a movie title" onkeydown="event.key=='Enter' && searchMovies()">
+    <button onclick="searchMovies()" class="search_button">
+    </div>
+    </button>
+    <div id="results"></div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //최초화면 버튼 초기화
+        const startBtn = document.createElement('button');
+        startBtn.id = 'start-Btn';
+        startBtn.textContent = "이름 생성";
+        document.body.appendChild(startBtn);
+
+        //로딩 스트링
+        let loadString = "로딩 중...";
+
+        //안녕하세요 스트링
+        let helloString = " 안녕하세요.";
+
+
+        //버튼을 눌렀을 때의 코드
+        startBtn.addEventListener('click', function(){
+            //최초 화면 일 때 버튼 동작
+            if(startBtn.id == 'start-Btn'){
+                const stringElement = document.createElement('p');
+                stringElement.textContent = loadString;
+                document.body.appendChild(stringElement);
+
+                startBtn.style.display = 'none';
+                setTimeout(setInputUI, 3000, startBtn, stringElement);
+            }
+            //최초 화면이 아닌, 이름 입력 상태일 때 버튼 동작
+            else{
+                const userName = document.getElementById('username').value;
+                const userNameElement = document.getElementById('displayText');
+                userNameElement.textContent = userName + helloString;
+
+                document.body.appendChild(userNameElement)
+            }
+        });
+
+        // 3초 지난 후, 버튼 - 이름 입력 객체 생성하는 함수
+        function setInputUI(btn, str){
+            const inputName = document.createElement('input');
+            const nameDisplay = document.createElement('p');
+
+            inputName.id = 'username';
+            inputName.type = 'text';
+            inputName.placeholder = "이름 입력";
+
+            nameDisplay.id = 'displayText';
+
+            btn.id = 'displayButton';
+            btn.textContent = "이름 입력";
+
+            btn.style.display = 'inline';
+            str.style.display = 'none';
+
+            document.body.appendChild(inputName);
+            document.body.appendChild(nameDisplay);
+        }
+    </script>
+</body>
+</html>

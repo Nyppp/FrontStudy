@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 200vh;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="scrollToBottom()">Scroll Down</button>
+
+    <script>
+        function scrollToBottom() {
+            window.scrollTo( {top : document.body.scrollHeight, behavior:"smooth"});
+            setTimeout(()=>{window.scrollTo( {top : 0, behavior:"smooth"});}, 5000);
+        }
+
+        
+    </script>
+</body>
+</html>

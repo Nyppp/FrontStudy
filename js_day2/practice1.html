@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 버튼 클릭 시, p태그 내부 문장 변경되도록 코드 작성 -->
+    <p id="text">여기를 클릭하세요!</p>
+    <button id="btn">텍스트 바꾸기</button>
+
+    <script>
+        const textID = document.getElementById('text');
+        const textChangeBtn = document.getElementById('btn');
+
+        let changedString = "글자가 바뀌었습니다. 다시 바꾸려면 버튼 재클릭"
+        let originString = "여기를 클릭하세요!"
+
+        textChangeBtn.addEventListener('click' , function(){
+            if(textID.textContent == changedString){
+                textID.textContent = originString;
+            }
+            else{
+                textID.textContent = changedString;
+            }
+        });
+        
+    </script>
+</body>
+</html>

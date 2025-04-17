@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 입력 처리</title>
+</head>
+<body>
+    <form id="singupForm">
+        <label>
+            이름 : <input type="text" id="name">
+        </label><br>
+        <label>
+            이메일 : <input type="email" id="email">
+        </label><br>
+        <button type="submit">제출</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        const form = document.getElementById('singupForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const user_name = document.getElementById('name').value;
+            const user_mail = document.getElementById('email').value;
+
+            if(user_name == "" || user_mail == ""){
+                alert("정보가 모두 입력되지 않았습니다.");
+            }
+
+            output.textContent = "사용자 이름 : " 
+                                + user_name
+                                + " 사용자 메일 : "
+                                + user_mail;
+        });
+    </script>
+</body>
+</html>

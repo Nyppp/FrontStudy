@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list"></ul>
+    <button onclick="addItem()">Add</button>
+    <button onclick="removeItem()">Remove</button>
+
+    <!-- 요소 생성 및 자식 추가 코드 -->
+    <script>
+        function addItem(){
+            const li = document.createElement('li');
+            li.textContent = 'New Item';
+            document.getElementById('list').appendChild(li);
+        }
+
+        function removeItem(){
+            const list = document.getElementById('list');
+            if(list.lastElementChild){
+                list.removeChild(list.lastElementChild);
+            }
+        }
+    </script>
+</body>
+</html>

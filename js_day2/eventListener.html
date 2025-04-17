@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+
+    <!-- 태그 내 onclick 추가하지 않고, 코드 상에서 이벤트리스너 등록 가능 -->
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', function(){
+            alert('button clicked!');
+        });
+    </script>
+</body>
+</html>

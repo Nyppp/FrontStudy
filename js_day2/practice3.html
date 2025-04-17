@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputBox" placeholder="엔터를 눌러보세요">
+    <p id="result"></p>
+
+    <script>
+        const result = document.getElementById('result');
+
+        let keyDownString = "엔터 눌림";
+        let keyUpString = "엔터 올라감";
+
+        document.addEventListener("keydown", function(){
+            if(event.key =='Enter'){
+                const inputText = document.getElementById('inputBox').value;
+                result.textContent = inputText + keyDownString;
+            }
+        });
+
+        document.addEventListener("keyup", function(){
+            if(event.key =='Enter'){
+                result.textContent = keyUpString;
+            }
+        });
+    </script>
+</body>
+</html>
